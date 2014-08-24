@@ -32,6 +32,19 @@ div.navigation a:hover {
   color: #79BC94;
 }
 
+.circle:before {
+  content: '\25CF';
+  font-size: 70px;
+  color: #212224;
+  -webkit-text-stroke: 1px white;
+  line-height: 30px;
+}
+
+.circle:hover:before {
+  color: #79BC94;
+  -webkit-text-stroke: none;
+}
+
 header {
     text-align: left;
     color: #fff ;
