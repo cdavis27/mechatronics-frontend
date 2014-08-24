@@ -8,6 +8,10 @@ body {
     font-family: Helvetica;
 }
 
+.section-heading {
+    color: #212224;
+}
+
 div.navigation{
     background-color: #212224;
     height: 100px;
@@ -60,11 +64,15 @@ header .intro-text .title {
   height: 800px;
 }
 
-#projects {
-
+#projects .projects-header {
+    height: 0;
+    padding-bottom: 39%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("/images/projects_header.png")
 }
 
-.green-top {
+#projects .green-top {
   height: 200px;
   width: 100%;
   background-color: #599273;
@@ -72,25 +80,25 @@ header .intro-text .title {
   left: 0;
 }
 
-div.container .albums {
+#projects .albums {
   margin-top: 65px;
 }
 
-div.container .albums img {
+#projects .albums img {
   width: 240px;
   height: auto;
   margin-bottom: 45px;
   border: 10px solid white;
 }
 
-div.container .albums #albumRow .img-circle-container {
+#projects .albums #albumRow .img-circle-container {
   width: 230px;
   height: 230px;
   display: inline-block;
   margin: 20px;
 }
 
-div.container .albums #albumRow .img-bg {
+#projects .albums #albumRow .img-bg {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -99,16 +107,26 @@ div.container .albums #albumRow .img-bg {
   background-image: url("http://placehold.it/210x210");
 }
 
-#hackNIght {
-  height: 800px;
+#contact input {
+    font-size: 18px;
 }
 
-#members {
-  height: 800px;
+#contact textarea {
+    resize: none;
+    font-size: 18px;
+    height: 15em;
 }
 
-#contact {
-  height: 800px;
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+    font-size: 16px;
+}
+
+#contact button {
+    background-color: #fff;
+    outline-color: #79BC94;
 }
 
 div.footer {
