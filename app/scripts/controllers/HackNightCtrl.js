@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name mechatronicsApp.controller:AboutCtrl
+ * @name mechatronicsApp.controller:HackNightCtrl
  * @description
- * # AboutCtrl
+ * # HackNightCtrl
  * Controller of the mechAppApp
  */
 angular.module('mechatronicsApp.controllers')
-  .controller('AboutCtrl', function ($scope) {
+  .controller('HackNightCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
