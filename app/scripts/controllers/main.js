@@ -2,16 +2,16 @@
 
 /**
  * @ngdoc function
- * @name mechAppApp.controller:MainCtrl
+ * @name mechatronicsApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the mechAppApp
+ * Controller of the mechatronicsApp
  */
-angular.module('mechAppApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+angular.module('mechatronicsApp.controllers')
+.controller('MainCtrl', function ($scope) {
+	$scope.awesomeThings = [
+		'HTML5 Boilerplate',
+		'AngularJS',
+		'Karma'
+	];
+});
