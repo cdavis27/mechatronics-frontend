@@ -11,6 +11,7 @@ body {
 .section-heading {
     text-transform: uppercase;
     padding-top: 24px;
+    padding-bottom: 24px;
     color: #212224;
 }
 
@@ -72,7 +73,7 @@ header .intro-text .title {
 
 #announcements {
   height: 500px;
-  background-color: #79BC94;
+  background-color: #599273;
 }
 
 #events {
