@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1280px"
+	 height="800px" viewBox="0 0 1280 800" enable-background="new 0 0 1280 800" xml:space="preserve">
+<g id="circle">
+	<circle fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="742.668" cy="753.255" r="13.971"/>
+</g>
+<g id="filledCircle">
+	<circle fill="#79BC94" cx="590.616" cy="753.255" r="13.971"/>
+</g>
+<g id="bar">
+	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="103" y1="752.5" x2="0" y2="671"/>
+	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="103" y1="752.5" x2="1202" y2="752.5"/>
+</g>
+</svg>
