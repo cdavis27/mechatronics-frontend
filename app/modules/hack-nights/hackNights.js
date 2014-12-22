@@ -11,9 +11,11 @@ angular
 .module('mechApp.hackNights', [
 	'ui.router'
 ])
-.config(['$stateProvider', function ($stateProvider) {
+.config(['$stateProvider',
+function ($stateProvider) {
 
 }])
-.controller('HackNightCtrl', function ($scope) {
+.controller('HackNightCtrl', ['$scope',
+function ($scope) {
 
-});
+}]);

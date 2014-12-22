@@ -1,0 +1,76 @@
+<header>
+	<!-- Landing Page Header - only show if main page -->
+    <div id="landing-page-header" class="container" ng-if="$state.includes('app.main')">
+        <div class="intro-text">
+            <div class="subtitle">BYU</div>
+            <div class="title">Mechatronics</div>
+        </div>
+    </div>
+
+    <!-- Navigation - always show -->
+    <nav>
+        <div class="navigation">
+            <div class="line-parent-wrapper" style="
+                position: relative;
+            ">
+              <div class="line-parent" style="
+                /* position: relative; */
+                position: absolute;
+                right: 1220px;
+            ">
+                            <div style="
+                border-top: 1px solid white;
+                position: absolute;
+                width: 145px;
+                transform: rotate(40deg);
+                left: -29px;
+            "></div>
+                          <div style="
+                position: absolute;
+                border-top: 1px solid white;
+                width: 400px;
+                left: 99px;
+                top: 47px;
+            "></div>
+                          <div style="
+                position: absolute;
+                left: 485px;
+                /* border-top: 1px solid white; */
+                width: 10%;
+                top: 27px;
+            " class="circle"></div>
+              </div>
+              </div>
+            <ul>
+                <li class="brand" ng-if="!$state.includes('app.main')">
+                    <a ui-sref="app.main">M</a>
+                </li>
+                <li>
+                    <a ui-sref="app.events">EVENTS</a>
+                </li>
+                <li>
+                   <a ui-sref="app.projects">PROJECTS</a>
+                </li>
+                <li>
+                  <a ui-sref="app.hack-nights">HACK NIGHTS</a>
+                </li>
+                <li>
+                    <a ui-sref="app.members">MEMBERS</a>
+                </li>
+                <li>
+                    <a ui-sref="app.contact">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Main app content goes here -->
+<div ui-view></div>
+
+<!-- Footer - always show -->
+<footer>
+	<div class="container">
+	    <span class="author"></span>
+	</div>
+</footer>

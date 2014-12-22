@@ -16,30 +16,32 @@ angular
     'ui.router',
     'ngSanitize',
     'ngTouch',
-    'mechApp.home',
+    'mechApp.main',
     'mechApp.hackNights',
     'mechApp.members'
 ])
-.config(['$stateProvider', function ($stateProvider) {
+.config(['$stateProvider', '$urlRouterProvider',
+function ($stateProvider,   $urlRouterProvider) {
+
     $stateProvider
-    .state('home', {
-        url: '/',
-        templateUrl: 'modules/home/home.html'
-    })
-    // $routeProvider
-    // .when('/', {
-    //     templateUrl: 'views/main.html',
-    //     controller: 'MainCtrl'
-    // })
-    // .when('/hack-nights', {
-    //     templateUrl: 'views/hack-nights.html',
-    //     controller: 'HackNightsCtrl'
-    // })
-    // .when('/members', {
-    //     templateUrl: 'views/members.html',
-    //     controller: 'MembersCtrl'
-    // })
-    // .otherwise({
-    //     redirectTo: '/'
-    // });
+    .state('app', {
+        abstract: true,
+        views: {
+            'root': { templateUrl: '/views/layout.tpl.html' },
+        }
+    });
+    $urlRouterProvider.otherwise('/');
+    
+}])
+.run([   '$rootScope', '$state', '$stateParams',
+function ($rootScope,   $state,   $stateParams) {
+
+    // It's very handy to add references to $state and $stateParams to the $rootScope
+    // so that you can access them from any scope within your applications.For example,
+    // <li ng-class="{ active: $state.includes('contacts.list') }"> will set the <li>
+    // to active whenever 'contacts.list' or one of its decendents is active.
+    $rootScope.$state = $state;
+    $rootScope.$stateParams = $stateParams;
+
+
 }]);

@@ -6,6 +6,13 @@ angular
 ])
 .config(['$stateProvider', function ($stateProvider) {
 
+	$stateProvider
+	.state('app.members', {
+		url: '/members',
+		templateUrl: 'modules/members/members.html',
+		controller: 'MembersCtrl'
+	});
+
 }])
 .controller('MembersCtrl', ['$scope', function($scope){
 
