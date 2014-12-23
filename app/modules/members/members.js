@@ -4,7 +4,8 @@ angular
 .module('mechApp.members', [
 	'ui.router'
 ])
-.config(['$stateProvider', function ($stateProvider) {
+.config(['$stateProvider',
+function ($stateProvider) {
 
 	$stateProvider
 	.state('app.members', {
@@ -14,12 +15,9 @@ angular
 	});
 
 }])
-.controller('MembersCtrl', ['$scope', function($scope){
-
-	// $scope.member = {
-	// 	name: '',
-	// 	email: ''
-	// }
+.controller('MembersCtrl',
+[  		 '$scope',
+function ($scope){
 
 	$scope.hasValidEmail = function(member) {
 		if (member && member.hasOwnProperty('email')) {

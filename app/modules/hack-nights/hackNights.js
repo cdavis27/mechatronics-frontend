@@ -14,8 +14,16 @@ angular
 .config(['$stateProvider',
 function ($stateProvider) {
 
+	$stateProvider
+	.state('app.hack-nights', {
+		url: '/hack-nights',
+		templateUrl: 'modules/hack-nights/hack-nights.html',
+		controller: 'HackNightsCtrl'
+	});
+
 }])
-.controller('HackNightCtrl', ['$scope',
+.controller('HackNightsCtrl',
+[	     '$scope',
 function ($scope) {
 
 }]);
