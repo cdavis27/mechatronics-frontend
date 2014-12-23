@@ -1,13 +1,18 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 body {
     font-family: Helvetica;
+    margin: 0 0 100px; /* bottom is height of footer */
 }
 
 header {
     text-align: left;
     color: #fff ;
     background-color: #212224;
-    height: 800px;  
+    height: 100%;
 }
 
 header .intro-text {
@@ -50,6 +55,10 @@ div.navigation a:hover {
 }
 
 footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     height: 100px;
+    width: 100%;
     background-color: #212224;
 }
