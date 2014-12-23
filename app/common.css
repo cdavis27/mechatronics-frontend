@@ -1,0 +1,55 @@
+
+body {
+    font-family: Helvetica;
+}
+
+header {
+    text-align: left;
+    color: #fff ;
+    background-color: #212224;
+    height: 800px;  
+}
+
+header .intro-text {
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+
+header .intro-text .subtitle {
+    font-size: 24px;
+}
+
+header .intro-text .title {
+    font-family: Helvetica;
+    font-size: 72px;
+}
+
+div.navigation{
+    background-color: #212224;
+    height: 100px;
+}
+
+div.navigation li {
+    display: inline;
+}
+
+div.navigation a {
+    color: #fff;
+}
+
+div.navigation a:hover {
+  text-decoration: none;
+  color: #79BC94;
+}
+
+.section-heading {
+    text-transform: uppercase;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    color: #212224;
+}
+
+footer {
+    height: 100px;
+    background-color: #212224;
+}

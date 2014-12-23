@@ -1,0 +1,103 @@
+
+#about {
+  height: 300px;
+}
+
+#announcements {
+  height: 500px;
+  background-color: #599273;
+}
+
+#events {
+  height: 800px;
+}
+
+#projects {
+    padding-bottom: 100px;
+}
+
+#projects .projects-header {
+    height: 0;
+    padding-bottom: 39%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("/images/projects_header.png");
+}
+
+#projects .green-top {
+    height: 240px;
+    width: 100%;
+    background-color: #599273;
+    position: absolute;
+    left: 0;
+}
+
+#projects .project-container {
+    margin-top: 105px;
+}
+
+#projects .albums img {
+    width: 240px;
+    height: auto;
+    margin-bottom: 45px;
+    border: 10px solid white;
+}
+
+#projects .project-container #projectRow .img-circle-container {
+    width: 230px;
+    height: 230px;
+    display: inline-block;
+    margin: 20px;
+}
+
+#projects .project-container #projectRow .img-bg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    border: 10px solid white;
+    background-image: url("http://placehold.it/210x210");
+}
+
+#projects .project-title {
+    text-transform: uppercase;
+}
+
+#contact {
+    padding-bottom: 24px;
+}
+
+#contact input {
+    font-size: 18px;
+}
+
+#contact input:focus {
+    outline: none;
+    border-color: #79BC94;
+    box-shadow: none;
+}
+
+#contact textarea {
+    resize: none;
+    font-size: 18px;
+    height: 15em;
+}
+
+#contact textarea:focus {
+    outline: none;
+    border-color: #79BC94;
+    box-shadow: none;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+    font-size: 16px;
+}
+
+#contact button {
+    background-color: #79BC94;
+    border-color: #79BC94;
+    padding: 8px 30px;
+}

@@ -12,18 +12,16 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="modules/main/main.css">
+    <link rel="stylesheet" href="modules/hack-nights/hack-nights.css">
+    <link rel="stylesheet" href="modules/members/members.css">
     <!-- endbuild -->
   </head>
   <body ng-app="mechApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-<!--     <div ng-include="'views/header-full.html'" ng-if="showHeaderFull"></div>
-    <div ng-include="'views/header-nav-only.html'" ng-if="!showHeaderFull"></div> -->
-<!-- 
-    <div ui-view="nav"></div> -->
 
     <!-- Add your site or application content here -->
     <div ui-view="root"></div>
@@ -61,11 +59,11 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="app.js"></script>
-        <script src="modules/main/main.js"></script>
-        <script src="modules/hack-nights/hackNights.js"></script>
-        <script src="modules/members/members.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="app.js"></script>
+    <script src="modules/main/main.js"></script>
+    <script src="modules/hack-nights/hackNights.js"></script>
+    <script src="modules/members/members.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
