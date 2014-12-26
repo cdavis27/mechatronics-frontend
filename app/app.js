@@ -18,10 +18,11 @@ angular
     'ngTouch',
     'mechApp.main',
     'mechApp.hackNights',
-    'mechApp.members'
+    'mechApp.members',
+    'mechApp.models'
 ])
-.config(['$stateProvider', '$urlRouterProvider',
-function ($stateProvider,   $urlRouterProvider) {
+.config(['$stateProvider', '$urlRouterProvider', 'ModelProvider',
+function ($stateProvider,   $urlRouterProvider,   ModelProvider) {
 
     $stateProvider
     .state('app', {
@@ -31,6 +32,8 @@ function ($stateProvider,   $urlRouterProvider) {
         }
     });
     $urlRouterProvider.otherwise('/');
+
+    ModelProvider.setBaseUrl('http://localhost:8001/v1/');
     
 }])
 .run([   '$rootScope', '$state', '$stateParams',

@@ -9,7 +9,8 @@
  */
 angular
 .module('mechApp.hackNights', [
-	'ui.router'
+	'ui.router',
+	// 'mechApp.models'
 ])
 .config(['$stateProvider',
 function ($stateProvider) {
@@ -28,60 +29,10 @@ function ($stateProvider) {
 ////////////////////////////
 
 .controller('HackNightsCtrl',
-[	     '$scope', '$filter',
-function ($scope,   $filter) {
-	var tags = [
-		'ios', 'bluetooth', 'teensy', 'servos', 'ultrasonic', 'electronics', 'project'
-	];
+[	     '$scope', '$filter', 'HackNight',
+function ($scope,   $filter,   HackNight) {
 
-	$scope.hackNights = [
-		{
-			id: 1,
-			title: 'iOS BLE + Arduino',
-			presenter: {full_name: 'Parker Lusk'},
-			description: 'Learn how to use the Bluetooth LE (BLE) protocol to control an Ardunio missle shooter from a native iOS app.',
-			date: '19-Nov-2014',
-			tags: tags,
-			repo: 'https://github.com/byu-mechatronics/shooter'
-		},
-		{
-			id: 2,
-			title: 'iOS BLE + Arduino',
-			presenter: {full_name: 'Parker Lusk'},
-			description: 'Learn how to use the Bluetooth LE (BLE) protocol to control an Ardunio missle shooter from a native iOS app.',
-			date: '19-Nov-2014',
-			tags: ['parker'],
-			repo: 'https://github.com/byu-mechatronics/shooter'
-		},
-		{
-			id: 3,
-			title: 'iOS BLE + Arduino',
-			presenter: {full_name: 'Parker Lusk'},
-			description: 'Learn how to use the Bluetooth LE (BLE) protocol to control an Ardunio missle shooter from a native iOS app.',
-			date: '19-Nov-2014',
-			tags: tags,
-			repo: 'https://github.com/byu-mechatronics/shooter'
-		},
-		{
-			id: 4,
-			title: 'iOS BLE + Arduino',
-			presenter: {full_name: 'Parker Lusk'},
-			description: 'Learn how to use the Bluetooth LE (BLE) protocol to control an Ardunio missle shooter from a native iOS app.',
-			date: '19-Nov-2014',
-			tags: ['test'],
-			repo: 'https://github.com/byu-mechatronics/shooter'
-		},
-		{
-			id: 5,
-			title: 'iOS BLE + Arduino',
-			presenter: {full_name: 'Parker Lusk'},
-			description: 'Learn how to use the Bluetooth LE (BLE) protocol to control an Ardunio missle shooter from a native iOS app.',
-			date: '19-Nov-2014',
-			tags: tags,
-			repo: 'https://github.com/byu-mechatronics/shooter'
-		},
-	];
-
+	$scope.hackNights = HackNight.query();
 
 	$scope.showMore = function(hackNight) {
 		console.log("Show more of:", hackNight);
