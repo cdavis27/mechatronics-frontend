@@ -21,8 +21,8 @@ angular
     'mechApp.members',
     'mechApp.models'
 ])
-.config(['$stateProvider', '$urlRouterProvider', 'ModelProvider',
-function ($stateProvider,   $urlRouterProvider,   ModelProvider) {
+.config(['$stateProvider', '$urlRouterProvider',
+function ($stateProvider,   $urlRouterProvider) {
 
     $stateProvider
     .state('app', {
@@ -32,8 +32,6 @@ function ($stateProvider,   $urlRouterProvider,   ModelProvider) {
         }
     });
     $urlRouterProvider.otherwise('/');
-
-    ModelProvider.setBaseUrl('http://localhost:8001/v1/');
     
 }])
 .run([   '$rootScope', '$state', '$stateParams',

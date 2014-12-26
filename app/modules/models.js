@@ -2,15 +2,15 @@
 
 angular.module('mechApp.models', [
 	'ngResource',
-	'ngCookies'
+	'ngCookies',
+	'mechApp.config'
 ])
-.run([   '$http', '$cookies',
-function ($http,   $cookies) {
-	$cookies.test = 'tn4e0tqhax9o5kn2c1qbr661go6foijp';
-	// $http.defaults.headers.Cookies = $cookies.test;
-	// $http.defaults.headers.common['Cookies'] = 'Cookie:sessionid=tn4e0tqhax9o5kn2c1qbr661go6foijp; csrftoken=DnRV42duhXqe61UMFtqTbeJIgIGsotCc';
-	$http.defaults.headers.common['x-csrftoken'] = 'DnRV42duhXqe61UMFtqTbeJIgIGsotCc';
-	$http.defaults.headers.common['Authorization'] = 'Session tn4e0tqhax9o5kn2c1qbr661go6foijp';
+.config(['$httpProvider', 'ModelProvider', 'API_URL', 'API_TOKEN',
+function ($httpProvider,   ModelProvider,   API_URL,   API_TOKEN) {
+	// This is for Token Auth to access the private, AnonymousUser part of the API
+	$httpProvider.defaults.headers.common['Authorization'] = 'Token ' + API_TOKEN;
+
+	ModelProvider.setBaseUrl(API_URL);
 }])
 .provider('Model', function() {
 	var _baseUrl = '';
@@ -31,13 +31,76 @@ function ($http,   $cookies) {
 		};
 	}];
 })
+
+////////////////////////
+//		Member
+////////////////////////
+
+.provider('Member', function() {
+
+	this.$get = ['$resource', 'Model', function($resource, Model) {
+		var Member = $resource(Model.makeUrl('members/:id'), {}, {});
+
+		return Member;
+	}];
+
+})
+
+////////////////////////
+//		   Skill
+////////////////////////
+
+.provider('Skill', function() {
+
+	this.$get = ['$resource', 'Model', function($resource, Model) {
+		var Skill = $resource(Model.makeUrl('skills/:id'), {}, {
+		})
+
+		return Skill;
+	}];
+
+})
+
+////////////////////////
+//		Project
+////////////////////////
+
+.provider('Project', function() {
+
+	this.$get = ['$resource', 'Model', function($resource, Model) {
+		var Project = $resource(Model.makeUrl('projects/:id'), {}, {
+		})
+
+		return Project;
+	}];
+
+})
+
+////////////////////////
+//		HackNight
+////////////////////////
+
 .provider('HackNight', function() {
 
 	this.$get = ['$resource', 'Model', function($resource, Model) {
-		var HackNight = $resource(Model.makeUrl('hack-nights/:id'), {}, {
-		})
+		var HackNight = $resource(Model.makeUrl('hack-nights/:id'), {}, {})
 
 		return HackNight;
 	}];
 
-});
+})
+
+////////////////////////
+//    Announcement
+////////////////////////
+
+.provider('Announcement', function() {
+
+	this.$get = ['$resource', 'Model', function($resource, Model) {
+		var Announcement = $resource(Model.makeUrl('announcements/:id'), {}, {
+		})
+
+		return Announcement;
+	}];
+
+})
