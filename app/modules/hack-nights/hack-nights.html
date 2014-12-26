@@ -1,68 +1,42 @@
 <div class="hack-nights-view">
-	<div class="container" >
-		<div class="col-xs-12 col-sm-4">
-			<div class="card">
-				<div class="card-heading"></div>
-				<div class="card-body">
-					<h3 class="title">hack night title</h3>
-					<h4 class="presenter">Parker Lusk</h4>
-					<p class="date">08/30/14</p>
-					<p class="description">Pellentesque cursus nulla eget magna blandit, ac accumsan enim commodo. Sed a mollis arcu. Maecenas elementum nec nisi in dictum. Phasellus lacinia, mauris dictum dictum luctus, nisl magna efficitur velit.</p>
-					<ul class="links">
-						<li>link</li>
-						<li>link</li>
-						<li>link</li>
-					</ul>
-				</div>
-				<div class="card-footer">
-					<button>View More</button>
-				</div>
+
+	<div class="container search">
+		<div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-8">
+			<div class="input-group">
+				<div class="input-group-addon"><i class="fa fa-search"></i></div>
+				<input type="text" class="form-control" placeholder="Search" ng-model="searchByHackNight">
 			</div>
 		</div>
 	</div>
 
-	<div class="container" >
-		<div class="col-xs-12 col-sm-4">
+	<div class="container cards">
+		<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="hackNight in hackNights | byHackNight:searchByHackNight">
 			<div class="card">
 				<div class="card-heading"></div>
 				<div class="card-body">
-					<h3 class="title">hack night title</h3>
-					<h4 class="presenter">Parker Lusk</h4>
-					<p class="date">08/30/14</p>
-					<p class="description">Pellentesque cursus nulla eget magna blandit, ac accumsan enim commodo. Sed a mollis arcu. Maecenas elementum nec nisi in dictum. Phasellus lacinia, mauris dictum dictum luctus, nisl magna efficitur velit.</p>
+					<h3 class="title">{{ hackNight.title }}</h3>
+					<h4 class="presenter">{{ hackNight.presenter.full_name }}</h4>
+					<p class="date">{{ hackNight.date }}</p>
+					<p class="description">{{ hackNight.description }}</p>
 					<ul class="links">
-						<li>link</li>
-						<li>link</li>
-						<li>link</li>
+						<li>
+							<i class="fa fa-github"></i>&nbsp;
+							<a ng-href="{{hackNight.repo}}">{{ hackNight.repo }}</a>
+						</li>
+						<li>
+							<i class="fa fa-tags"></i>
+							<ul class="tags">
+								<li ng-repeat="tag in hackNight.tags">
+									<a href="javascript:void(0)" ng-click="showTag(tag)">{{ tag }}</a>
+								</li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 				<div class="card-footer">
-					<button>View More</button>
+					<a href="javascript:void(0);" ng-click="showMore(hackNight)">View More</a>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<div class="container" >
-		<div class="col-xs-12 col-sm-4">
-			<div class="card">
-				<div class="card-heading"></div>
-				<div class="card-body">
-					<h3 class="title">hack night title</h3>
-					<h4 class="presenter">Parker Lusk</h4>
-					<p class="date">08/30/14</p>
-					<p class="description">Pellentesque cursus nulla eget magna blandit, ac accumsan enim commodo. Sed a mollis arcu. Maecenas elementum nec nisi in dictum. Phasellus lacinia, mauris dictum dictum luctus, nisl magna efficitur velit.</p>
-					<ul class="links">
-						<li>link</li>
-						<li>link</li>
-						<li>link</li>
-					</ul>
-				</div>
-				<div class="card-footer">
-					<button>View More</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
 </div>

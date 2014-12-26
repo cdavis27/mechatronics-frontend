@@ -1,21 +1,31 @@
 /* Hack Nights
 =======================================*/
 
+.search {
+    margin-top: 1%;
+    padding: 0;
+}
+
+.cards {
+    padding: 1% 0;
+}
+
 .card {
-    width: 320px;
+    width: 100%;
+    position: relative;
     border: 1px solid transparent;
-    margin: 20px 20px;
+    margin: 4% 0;
     border-radius: 15px;
 }
 
 .card .card-heading {
     background-color: #79BC94;
-    height:120px;
+    height: 120px;
 }
 
 .card .card-body {
     height: 370px;
-    padding: 10px 15px;
+    padding: 1% 1.5%;
     background-color: #fff;
 }
 
@@ -32,10 +42,27 @@
 .card .card-body ul {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
-.card .card-body .links {
-    list-style: none;
+.card .card-body .tags {
+    display: inline;
+}
+
+.card .card-body .tags li {
+    display: inline;
+}
+
+.card .card-body .tags li::after {
+    content: ",";
+}
+
+.card .card-body .tags li:last-child::after {
+    content: "";
+}
+
+.card .card-body .tags li a {
+    margin-right: -1%;
 }
 
 .card .card-footer {
@@ -43,15 +70,18 @@
     color: #fff;
 }
 
-.card .card-footer button {
-    width:100%;
-    height:100%;
+.card .card-footer a {
+    display: inline-block;
+    text-align: center;
+    line-height: 48px; /* same as .card-footer */
+    width: 100%;
+    height: 100%;
     color: #fff;
     background-color: #212224;
-    border: none;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.card .card-footer button:hover {
-
+.card .card-footer a:hover {
+    color: #A5DBBB;
 }
