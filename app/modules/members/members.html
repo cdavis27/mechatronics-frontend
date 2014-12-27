@@ -12,10 +12,10 @@
 
 	<div class="container" ng-repeat="member in members">
 		<div class="profile">
-			<div class="member-picture">picture</div>    
+			<div class="member-picture"><img ng-src="{{member.profile_picture}}"></div>    
 			<div class="memeber-name">{{ member.full_name }}</div>
-			<div class="member-major">major</div>
-			<div class="member-email">email</div>
+			<div class="member-major">{{ member.major.name }}</div>
+			<div class="member-email">{{ member.email }}</div>
 			<div class="member-skills">skills</div>
 		</div>
 	</div>
