@@ -10,7 +10,7 @@
 angular
 .module('mechApp.hackNights', [
 	'ui.router',
-	// 'mechApp.models'
+	'mechApp.models'
 ])
 .config(['$stateProvider',
 function ($stateProvider) {
