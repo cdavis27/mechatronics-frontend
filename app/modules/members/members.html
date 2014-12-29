@@ -1,22 +1,32 @@
 <div class="members-view">
 
-	<div class="container">
-		<div class="profile">
-			<div class="member-picture">picture</div>    
-			<div class="memeber-name">name</div>
-			<div class="member-major">major</div>
-			<div class="member-email">email</div>
-			<div class="member-skills">skills</div>
-		</div>
-	</div>
+<h1>Members</h1>
 
 	<div class="container" ng-repeat="member in members">
 		<div class="profile">
-			<div class="member-picture"><img ng-src="{{member.profile_picture}}"></div>    
+			<div class="col-sm-2">
+			<img ng-src="{{member.profile_picture}}" class="profile-img">
+			</div>
+			<div class="col-sm-5">
+				<h3>{{ member.full_name }}</h3>
+				<h5>{{ member.major.name }} <span ng-if="member.minor">| {{ member.minor.name }}</span></h5>
+				<div class="contact-info">
+					<span class="email"><i class="fa fa-email"></i><a href="mailto:{{member.email}}">{{ member.email }}</a></span>
+				</div>
+			</div>
+			<div class="col-sm-5">
+				<h4>Projects</h4>
+				<div class="projects"></div>
+				<h4>Skills</h4>
+				<div class="skills"></div>
+			</div>
+
+
+		<!-- 	<div class="member-picture"></div>    
 			<div class="memeber-name">{{ member.full_name }}</div>
 			<div class="member-major">{{ member.major.name }}</div>
 			<div class="member-email">{{ member.email }}</div>
-			<div class="member-skills">skills</div>
+			<div class="member-skills">skills</div> -->
 		</div>
 	</div>
 
