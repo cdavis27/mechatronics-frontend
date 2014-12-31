@@ -1,15 +1,26 @@
+section {
+    padding: 60px 0;
+}
+
+.section-heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Montserrat, Helvetica;
+    margin-bottom: 40px;
+}
 
 #about {
-  height: 300px;
+
 }
 
 #announcements {
-  height: 500px;
-  background-color: #599273;
+
 }
 
 #events {
-  height: 800px;
+
 }
 
 #projects {
@@ -96,8 +107,8 @@
     font-size: 16px;
 }
 
-#contact button {
+/*#contact button {
     background-color: #79BC94;
     border-color: #79BC94;
     padding: 8px 30px;
-}
+}*/

@@ -4,34 +4,91 @@ html {
 }
 
 body {
-    font-family: Helvetica;
+    font-family: "Open Sans";
+    font-weight: 200;
     margin: 0 0 100px; /* bottom is height of footer */
 }
 
-header {
-    text-align: left;
+p {
+    text-align: center;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 45px;
+}
+
+.btn {
+    width: 150px;
+    height: 60px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-family: Montserrat, Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #79BC94;
     color: #fff;
-    background-color: #212224;
+    border: 1px solid #79BC94;
+    border-radius: 4em;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active {
+    color: #79BC94;
+    background-color: #fff;
+    border-color: #79BC94;
+}
+
+header {
+    text-align: center;
+    /*color: #212224;*/
+    background-color: #fff;
     height: 100%;
 }
 
-header .intro-text {
-    padding-top: 200px;
-    padding-bottom: 50px;
-}
-
 header .intro-text .subtitle {
+    padding-top: 230px;
+    padding-bottom: 10px;
+    font-family: Montserrat, Helvetica;
+    font-weight: 400;
     font-size: 24px;
 }
 
 header .intro-text .title {
-    font-family: Helvetica;
-    font-size: 72px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: Montserrat, Helvetica;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+header .join-button {
+    margin-top: 90px;
+    margin-bottom: 120px;
+}
+
+@media(min-width:768px) {
+    header .intro-text .subtitle {
+        font-size: 36px;
+        font-weight: 400px;
+    }
+
+    header .intro-text .title{
+        text-transform: uppercase;
+        font-family: Montserrat, Helvetica;
+        font-size: 75px;
+        line-height: 75px;
+    }
+}
+
+.nav {
+    margin-top: 18px;
 }
 
 div.navigation{
-    background-color: #212224;
-    height: 100px;
+    background-color: #fff;
+    height: 90px;
 }
 
 div.navigation li {
@@ -39,7 +96,10 @@ div.navigation li {
 }
 
 div.navigation a {
-    color: #fff;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    color: #212224 !important;
 }
 
 div.navigation a:hover {
