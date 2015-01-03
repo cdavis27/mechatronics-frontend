@@ -107,23 +107,23 @@
             <div class="fluid-container">
 
                 <div class="col-md-6 form-group">
-                    <input type="text" class="form-control" placeholder="name">
+                    <input type="text" class="form-control" placeholder="name" ng-model="contact.name" ng-class="{'error': contact.error.name}" popover-placement="top" popover="You didn't tell us who you are :/" popover-trigger="show" popover-show="contact.error.name">
                 </div>
 
                 <div class="col-md-6 form-group">
-                    <input type="text" class="form-control" placeholder="email">
+                    <input type="text" class="form-control" placeholder="email" ng-model="contact.email" ng-class="{'error': contact.error.email}" popover-placement="top" popover="Don't you want us to send a message back?" popover-trigger="show" popover-show="contact.error.email">
                 </div>
 
             </div>
 
             <div class="fluid-container">
                 <div class="col-md-12 form-group">
-                    <textarea class="form-control" placeholder="message, complaints, accusations, etc"></textarea>
+                    <textarea class="form-control" placeholder="message, complaints, accusations, etc" ng-model="contact.message" ng-class="{'error': contact.error.message}" popover-placement="bottom" popover="Don't be shy, send us a message!" popover-trigger="show" popover-show="contact.error.message"></textarea>
                 </div>
             </div>
             <div class="fluid-container">
                 <div class="col-md-12 form-group">
-                    <button class="btn btn-primary btn-large pull-right">Send</button>
+                    <button class="btn btn-primary btn-large pull-right" ng-click="sendContact(contact)">Send</button>
                 </div>
             </div>
     </section>

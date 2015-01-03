@@ -124,11 +124,18 @@ section {
     padding-bottom: 24px;
 }
 
+#contact input.error,
+#contact textarea.error {
+    border-color: #EE7878 !important;
+    border-width: 2px;
+}
+
 #contact input {
     font-size: 18px;
 }
 
-#contact input:focus {
+#contact input:focus,
+#contact textarea:focus {
     outline: none;
     border-color: #79BC94;
     box-shadow: none;
@@ -138,12 +145,6 @@ section {
     resize: none;
     font-size: 18px;
     height: 15em;
-}
-
-#contact textarea:focus {
-    outline: none;
-    border-color: #79BC94;
-    box-shadow: none;
 }
 
 ::-webkit-input-placeholder,

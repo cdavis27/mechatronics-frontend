@@ -7,7 +7,7 @@ angular.module('mechApp.models', [
 ])
 .config(['$httpProvider', 'ModelProvider', 'API_URL', 'API_TOKEN',
 function ($httpProvider,   ModelProvider,   API_URL,   API_TOKEN) {
-	// This is for Token Auth to access the private, AnonymousUser part of the API
+	// This is for Token Auth to access the private, User part of the API
 	$httpProvider.defaults.headers.common['Authorization'] = 'Token ' + API_TOKEN;
 
 	ModelProvider.setBaseUrl(API_URL);
@@ -20,15 +20,32 @@ function ($httpProvider,   ModelProvider,   API_URL,   API_TOKEN) {
 		_baseUrl =  (value.substr(-1) === '/') ? value.substr(0, value.length-1) : value;
 	}
 
-	this.$get = [function() {
-		return {
+	this.$get = ['$http', '$q', function($http, $q) {
+		var methods = {
 			getBaseUrl: function() {
 				return _baseUrl;
 			},
 			makeUrl: function(endpoint) {
 				return _baseUrl + '/' + endpoint;
+			},
+			http: {
+				post: function(endpoint, payload) {
+					var deferred = $q.defer();
+					$http.post(methods.makeUrl(endpoint), payload)
+					.success(function(data, status, headers, config) {
+						deferred.resolve([data, status, headers, config]);
+					})
+					.error(function(data, status, headers, config) {
+						deferred.reject([data, status, headers, config]);
+					});
+
+					return deferred.promise;
+				}
 			}
 		};
+
+
+		return methods;
 	}];
 })
 

@@ -93,9 +93,10 @@ header .join-button {
     margin-right: 4.5%;
 }
 
-div.navigation{
+div.navigation {
     background-color: #fff;
     height: 90px;
+    z-index: 50; /* don't go above sweetalerts */
 }
 
 div.navigation li {
