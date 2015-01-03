@@ -1,0 +1,35 @@
+.join-view {
+    margin-top: 120px;
+}
+
+.join-form {
+    margin: 30px;
+}
+
+.modal-title h4 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: Montserrat, Helvetica;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.join-form .form-control {
+    /*border-radius: 20px;*/
+    height: 40px;
+    /*margin-top: 20px;*/
+}
+
+.join-form label {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.join-form .checkbox-inline {
+    /*font-size: 50px;*/
+}
+
+input[type='checkbox'] {
+
+}

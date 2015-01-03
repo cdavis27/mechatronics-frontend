@@ -3,9 +3,8 @@
 /*.members-view:first-child .container:first-child .profile:first-child {
 	border-top: none;
 }*/
-
-.members-view .container {
-	margin: 1% auto;
+.members-view {
+	margin-top: 120px;
 }
 
 .profile {

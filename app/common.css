@@ -9,17 +9,7 @@ body {
     margin: 0 0 100px; /* bottom is height of footer */
 }
 
-p {
-    text-align: center;
-    font-weight: 100;
-    font-size: 24px;
-    line-height: 45px;
-}
-
-.btn {
-    width: 150px;
-    height: 60px;
-    margin-top: 20px;
+.btn-primary {
     text-transform: uppercase;
     font-family: Montserrat, Helvetica;
     font-size: 18px;
@@ -30,16 +20,31 @@ p {
     border-radius: 4em;
 }
 
-.btn:hover,
-.btn:focus,
-.btn:active,
-.btn.active {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
     color: #79BC94;
     background-color: #fff;
     border-color: #79BC94;
 }
 
+.btn-large {
+    width: 150px;
+    height: 60px;
+    margin-top: 20px;
+}
+
+.btn-small {
+    margin-top: 0;
+    line-height: 10px;
+    height: 10%;
+    width: 150%;
+}
+
 header {
+    background: url('images/circuitBoard-01.png');
+    background-size: cover;
     text-align: center;
     /*color: #212224;*/
     background-color: #fff;
@@ -112,6 +117,14 @@ div.navigation a:hover {
     padding-top: 24px;
     padding-bottom: 24px;
     color: #212224;
+}
+
+.page-heading h1 {
+    text-transform: uppercase;
+    font-family: Montserrat, Helvetica;
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 90px;
 }
 
 footer {

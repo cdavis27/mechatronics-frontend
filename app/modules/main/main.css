@@ -2,6 +2,13 @@ section {
     padding: 60px 0;
 }
 
+main-view p {
+    text-align: center;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 45px;
+}
+
 .section-heading {
     text-transform: uppercase;
     text-align: center;

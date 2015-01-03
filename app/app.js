@@ -14,11 +14,13 @@ angular
     'ngCookies',
     'ngResource',
     'ui.router',
+    'ui.bootstrap',
     'ngSanitize',
     'ngTouch',
     'mechApp.main',
     'mechApp.hackNights',
     'mechApp.members',
+    'mechApp.join',
     'mechApp.models'
 ])
 .config(['$stateProvider', '$urlRouterProvider',
@@ -43,6 +45,5 @@ function ($rootScope,   $state,   $stateParams) {
     // to active whenever 'contacts.list' or one of its decendents is active.
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
-
-
+    
 }]);

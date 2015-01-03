@@ -1,6 +1,10 @@
 /* Hack Nights
 =======================================*/
 
+.hack-nights-view {
+    margin-top: 120px;
+}
+
 .search {
     margin-top: 1%;
     padding: 0;

@@ -104,3 +104,18 @@ function ($httpProvider,   ModelProvider,   API_URL,   API_TOKEN) {
 	}];
 
 })
+
+////////////////////////
+//    join
+////////////////////////
+
+.provider('Join', function() {
+
+	this.$get = ['$resource', 'Model', function($resource, Model) {
+		var Join = $resource(Model.makeUrl('join/:id'), {}, {
+		})
+
+		return Join;
+	}];
+
+})
