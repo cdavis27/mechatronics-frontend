@@ -1,12 +1,5 @@
 section {
-    padding: 60px 0;
-}
-
-main-view p {
-    text-align: center;
-    font-weight: 100;
-    font-size: 24px;
-    line-height: 45px;
+    padding: 200px 0 0 0;
 }
 
 .section-heading {
@@ -19,24 +12,70 @@ main-view p {
 }
 
 #about {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
 
+#about .about-icons {
+    margin-bottom: 3%;
+}
+
+#about img.about-icon {
+    margin-right: 5%;
+}
+
+#about p {
+    text-align: center;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 45px;
 }
 
 #announcements {
+    /*background-color: #79BC94;*/
+}
+
+#announcements .announcement {
+    border-bottom: 1px solid #212224;
+    padding: 2% 0 2% 0;
+}
+
+#announcements .day {
+    text-align: center;
+    font-family: Montserrat, Helvetica;
+    font-weight: 700;
+    font-size: 65px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#announcements .month {
+    text-align: center;
+    font-size: 21px;
+}
+
+#announcements .annoucement-body .title {
+    font-family: Montserrat, Helvetica;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+#announcements .text {
+    font-size: 21px;
 
 }
 
 #events {
 
 }
-
+/*
 #projects {
     padding-bottom: 100px;
-}
+}*/
 
-#projects .projects-header {
+#byu-image {
     height: 0;
-    padding-bottom: 39%;
+    padding-bottom: 26%;
     background-repeat: no-repeat;
     background-size: 100%;
     background-image: url("/images/projects_header.png");
