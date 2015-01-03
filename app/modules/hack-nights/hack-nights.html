@@ -21,10 +21,11 @@
 					<h3 class="title">{{ hackNight.title }}</h3>
 				</div>
 				<div class="card-body">
-					<div class="presenter">
-						<img ng-src="{{hackNight.presenter.profile_picture}}" class="profile-img">
-						<h4 class="presenter-name">{{ hackNight.presenter.full_name }}</h4>
+					<div class="presenter-info">
+						<img ng-src="{{hackNight.presenter.profile_picture}}" class="presenter-img">
+						<h3 class="presenter-name">{{ hackNight.presenter.full_name }}</h3>
 					</div>
+					<div class="clearfix"></div>
 					<p class="description">{{ hackNight.description }}</p>
 					<ul class="links">
 						<li>

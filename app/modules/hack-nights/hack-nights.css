@@ -27,10 +27,25 @@
     height: 120px;
 }
 
+.card .card-body .presenter-info .presenter-img {
+    float: left;
+    width: 28%;
+    border-radius: 100%;
+    margin-top: 7%;
+}
+
+.card .card-body .presenter-info .presenter-name {
+    float: left;
+    line-height: 3.8em;
+    margin-top: 7%;
+    margin-left: 5%;
+    font-size: 20px;
+}
+
 .card .card-body {
-    height: 350px;
+    height: 395px;
     padding-left: 5%;
-    padding-right: 5%
+    padding-right: 5%;
     background-color: #fff;
 }
 
@@ -44,8 +59,8 @@
     color: #fff;
     text-transform: uppercase;
     margin: 0;
-    font-family: Montserrat, Helvetica;
-    padding-left: 5%;R
+    font-family: 'Montserrat', Helvetica;
+    padding-left: 5%;
 }
 
 .card .card-heading .date {
@@ -55,19 +70,14 @@
     padding-left: 5%;
 }
 
-.card .card-body .presenter-name {
-    margin-top: 6%;
-}
-
 .card .card-body .description {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    height: 170px;
+    padding-top: 7%;
+    padding-bottom: 10%;
     font-size: 18px;
 }
 
 .card .card-body ul {
-    margin: 0;
+    margin: 0 0 7% 0;
     padding: 0;
     list-style: none;
 }
