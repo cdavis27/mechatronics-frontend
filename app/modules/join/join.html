@@ -1,46 +1,39 @@
 <div class="join-view">
 	<div class="container">
-	    <div class="page-header text-center">
+	    <div class="page-heading text-center">
 	        <h1>JOIN</h1>
+	        <p>dadfad fdfadsf sdfsdfsdf sdfsdfsdfs dfsdfsdfs fsdfsdfsd fsdfs</p>
 	    </div>
 	    <form class="join-form" role="form">
 	        
-	        <div class="container name-field">
-	        	<div class="join-label col-lg-2">
-	        		<h4>YOUR NAME</h4>
-	        	</div>
-		        <div class="first-name-field form-group col-lg-4">
-		            <input type="text" ng-model="firstName.text" class="form-control">
+	        <div class="join-field name-field col-lg-12">
+	        	<h4 class="join-label col-lg-2">YOUR NAME</h4>
+		        <div class="first-name-field form-group right-field col-lg-5">
+		            <input type="text" ng-model="firstName.text" class="form-control" placeholder="first name">
 		        </div>
-		        <div class="last-name-field form-group col-lg-4">
-		        	<input type="text" ng-model="lastName.text" class="form-control">
+		        <div class="last-name-field right-field form-group col-lg-5">
+		        	<input type="text" ng-model="lastName.text" class="form-control" placeholder="last name">
 		        </div>
 		    </div>
-	        <div class="container name-field">
-	        	<div class="name-label col-lg-2">
-	        		<h4>YOUR EMAIL</h4>
-	        	</div>
-		        <div class="email-field form-group col-lg-8">
-		            <input type="text" ng-model="email.text" class="form-control">
+	        <div class="join-field name-field col-lg-12">
+	        	<h4 class="join-label col-lg-2">YOUR EMAIL</h4>
+		        <div class="email-field right-field form-group col-lg-10">
+		            <input type="text" ng-model="email.text" class="form-control" placeholder="email address">
 		        </div>
 		    </div>
-	        <div class="container name-field">
-	        	<div class="name-label col-lg-2">
-	        		<h4>PASSWORD</h4>
-	        	</div>
-		        <div class="password-field form-group col-lg-4">
-		            <input type="text" ng-model="password.text" class="form-control">
+	        <div class="join-field name-field col-lg-12">
+	        	<h4 class="join-label col-lg-2">PASSWORD</h4>
+		        <div class="password-field form-group right-field  col-lg-5">
+		            <input type="text" ng-model="password.text" class="form-control" placeholder="password">
 		        </div>
-		           <div class="password-field form-group col-lg-4">
-		            <input type="text" ng-model="password.text" class="form-control">
+		           <div class="password-field right-field form-group col-lg-5">
+		            <input type="text" ng-model="password.text" class="form-control" placeholder="verify password">
 		        </div>
 		      </div>
-		    <div class="container name-field">
-		    	<div class="name-label col-lg-2">
-	        		<h4>MAJOR</h4>
-	        	</div>  
-		        <div class="major-dropdown form-group col-lg-8">
-		            <select class="form-control input-lg">
+		    <div class="join-field name-field col-lg-12">
+	        	<h4 class="join-label col-lg-2">MAJOR</h4> 
+		        <div class="major-dropdown form-group col-lg-10">
+		            <select class="form-control right-field input-lg">
 		                <option value="null">Select One</option>
 		                <option value="electricalEngineering">Electrical Engineering</option>
 		                <option value="mechanicalEngineering">Mechanical Engineering</option>
@@ -50,12 +43,10 @@
 		            </select>
 		        </div>
 		    </div>
-		    <div class="container name-field">
-		    	<div class="name-label col-lg-2">
-	        		<h4>MINOR</h4>
-	        	</div>
-		        <div class="minor-dropdown form-group col-lg-8">
-		            <select class="form-control input-lg">
+		    <div class="join-field name-field col-lg-12">
+	        	<h4 class="join-label col-lg-2">MINOR</h4>
+		        <div class="minor-dropdown form-group col-lg-10">
+		            <select class="minor-dropdown form-group col-lg-10 form-control right-field input-lg">
 		                <option value="null">Select One</option>
 		                <option value="null">None</option>
 		                <option value="computerScience">Computer Science</option>
@@ -63,16 +54,15 @@
 		            </select>
 		        </div>
 	        </div>
-	        <div class="container name-field">
-	        	<div class="name-label col-lg-2">
-	        		<h4>PROFILE PICTURE</h4>
-	        	</div>
-		        <div class="profile-picture form-group col-lg-8">
+	        <div class="join-field name-field col-lg-12">
+	        	<h4 class="join-label col-lg-2">PICTURE</h4>
+		        <div class="profile-picture form-group col-lg-10">
 		             <label>PROFILE PICTURE</label>
 		        </div>
 	        </div>
-	        <div class="container name-field">
-		        <div class="skills form-group col-lg-8">
+	        <div class="join-field name-field col-lg-12">
+	        	<h4 class="join-label col-lg-2">YOUR SKILLS</h4>
+		        <div class="skills form-group right-field col-lg-10">
 		            <div>
 		                <label class="checkbox-inline"><input type="checkbox" name="python">Arduino</label>
 		                <label class="checkbox-inline"><input type="checkbox" name="Arduino">Raspberry Pi</label>
@@ -89,7 +79,7 @@
 	        </div>
 	    
 	    </form> 
-	    <div>
+	    <div class="col-lg-12 col-lg-offset-5">
 	        <button class="btn btn-primary btn-large">Submit</button>
 	    </div>
 

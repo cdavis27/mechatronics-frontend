@@ -28,25 +28,52 @@
 }
 
 .card .card-body {
-    height: 370px;
-    padding: 1% 1.5%;
+    height: 350px;
+    padding-left: 5%;
+    padding-right: 5%
     background-color: #fff;
 }
 
-.card .card-body .title {
-    color: #79BC94;
+.card .card-body p {
+    margin-top: 5%;
+    margin-bottom: 1%;
+    font-size: 14px;
+}
+
+.card .card-heading .title {
+    color: #fff;
     text-transform: uppercase;
+    margin: 0;
+    font-family: Montserrat, Helvetica;
+    padding-left: 5%;R
+}
+
+.card .card-heading .date {
+    margin: 0;
+    color: #fff;
+    padding-top: 15%;
+    padding-left: 5%;
+}
+
+.card .card-body .presenter-name {
+    margin-top: 6%;
 }
 
 .card .card-body .description {
     padding-top: 24px;
     padding-bottom: 24px;
+    height: 170px;
+    font-size: 18px;
 }
 
 .card .card-body ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.card .links li {
+    margin-bottom: 2.5%;
 }
 
 .card .card-body .tags {

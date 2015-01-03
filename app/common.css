@@ -89,6 +89,8 @@ header .join-button {
 
 .nav {
     margin-top: 18px;
+    float: right;
+    margin-right: 4.5%;
 }
 
 div.navigation{
@@ -124,7 +126,6 @@ div.navigation a:hover {
     font-family: Montserrat, Helvetica;
     font-weight: 700;
     font-size: 50px;
-    margin-bottom: 90px;
 }
 
 footer {

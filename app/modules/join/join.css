@@ -2,16 +2,35 @@
     margin-top: 120px;
 }
 
+.join-view p {
+    color: #79BC94;
+    font-size: 24px;
+}
+
 .join-form {
     margin: 30px;
 }
 
-.modal-title h4 {
-    margin-bottom: 30px;
-    margin-top: 30px;
-    font-family: Montserrat, Helvetica;
-    font-weight: 700;
-    font-size: 36px;
+.join-field {
+    /*border-top: 1px solid #CCCCCC;*/
+    padding-top: 2%;
+    padding-bottom: 1%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.right-field {
+    padding-right: 0;
+}
+
+.join-label {
+    padding-left: 0;
+}
+
+.join-label {
+    font-size: 18px;
+    color: #79BC94;
+    padding-left: 0;
 }
 
 .join-form .form-control {
@@ -30,6 +49,6 @@
     /*font-size: 50px;*/
 }
 
-input[type='checkbox'] {
-
+.join-view .btn-primary {
+    margin-bottom: 120px;
 }

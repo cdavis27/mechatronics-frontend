@@ -1,7 +1,7 @@
 <div class="hack-nights-view">
 
 	<div class="page-heading container text-center">
-		<h1>Members</h1>
+		<h1>HACK NIGHTS</h1>
 	</div>
 
 	<div class="container search">
@@ -16,11 +16,15 @@
 	<div class="container cards">
 		<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="hackNight in hackNights | byHackNight:searchByHackNight">
 			<div class="card">
-				<div class="card-heading"></div>
-				<div class="card-body">
-					<h3 class="title">{{ hackNight.title }}</h3>
-					<h4 class="presenter">{{ hackNight.presenter.full_name }}</h4>
+				<div class="card-heading">
 					<p class="date">{{ hackNight.date }}</p>
+					<h3 class="title">{{ hackNight.title }}</h3>
+				</div>
+				<div class="card-body">
+					<div class="presenter">
+						<img ng-src="{{hackNight.presenter.profile_picture}}" class="profile-img">
+						<h4 class="presenter-name">{{ hackNight.presenter.full_name }}</h4>
+					</div>
 					<p class="description">{{ hackNight.description }}</p>
 					<ul class="links">
 						<li>
