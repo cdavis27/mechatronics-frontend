@@ -3,8 +3,9 @@
 angular
 .module('mechApp.main', [
 	'ui.router',
-	'ui.bootstrap',
-	'oitozero.ngSweetAlert'
+	'mechApp.tooltip',
+	'oitozero.ngSweetAlert',
+	'mechApp.models'
 ])
 .config(['$stateProvider', '$tooltipProvider',
 function ($stateProvider,   $tooltipProvider) {
@@ -14,29 +15,7 @@ function ($stateProvider,   $tooltipProvider) {
 		templateUrl: 'modules/main/main.html',
 		controller: 'MainCtrl'
 	});
-
-	$tooltipProvider.setTriggers({
-		'show': 'hide'
-	});
 }])
-
-.directive('popoverShow', [function(){
-	return {
-		restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
-		link: function($scope, iElm, iAttrs, controller) {
-			$scope.$watch(iAttrs.popoverShow, function(newVal, oldVal) {
-				if (newVal != oldVal) {
-					var toggle = (newVal) ? 'show' : 'hide';
-					setTimeout(function() {
-						iElm.trigger(toggle);
-					}, 1);
-					
-				}
-			});
-		}
-	};
-}])
-
 
 .controller('MainCtrl',
 [		 '$scope', '$http', 'Model', 'SweetAlert',
@@ -54,7 +33,7 @@ function ($scope,   $http,   Model,   SweetAlert) {
 		}
 
 		// Validate email
-		if (!isEmailValid(contact.email) || !contact.email.trim()) {
+		if (!isEmailValid(contact.email)) {
 			send = false;
 			contact.error.email = true;
 		}

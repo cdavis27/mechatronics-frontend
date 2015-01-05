@@ -52,3 +52,15 @@
 .join-view .btn-primary {
     margin-bottom: 120px;
 }
+
+.join-view input.error,
+.join-view select.error {
+    border-color: #EE7878 !important;
+    border-width: 2px;
+}
+
+.join-view input:focus {
+    outline: none;
+    border-color: #79BC94;
+    box-shadow: none;
+}

@@ -123,16 +123,16 @@ function ($httpProvider,   ModelProvider,   API_URL,   API_TOKEN) {
 })
 
 ////////////////////////
-//    join
+//    FieldOfStudy
 ////////////////////////
 
-.provider('Join', function() {
+.provider('FieldOfStudy', function() {
 
 	this.$get = ['$resource', 'Model', function($resource, Model) {
-		var Join = $resource(Model.makeUrl('join/:id'), {}, {
+		var FieldOfStudy = $resource(Model.makeUrl('field-of-studies/:id'), {}, {
 		})
 
-		return Join;
+		return FieldOfStudy;
 	}];
 
 })
