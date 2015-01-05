@@ -4,6 +4,7 @@ angular
 .module('mechApp.join', [
 	'ui.router',
 	'oitozero.ngSweetAlert',
+	'ImageCropper',
 	'mechApp.models'
 ])
 .config(['$stateProvider',
@@ -19,13 +20,17 @@ function ($stateProvider) {
 }])
 
 .controller('JoinCtrl',
-[	     '$scope', '$filter', 'FieldOfStudy', 'Skill', 'Member', 'SweetAlert', '$location',
-function ($scope,   $filter,   FieldOfStudy,   Skill,   Member,   SweetAlert,   $location) {
+[	     '$scope', '$filter', 'FieldOfStudy', 'Skill', 'Member', 'SweetAlert', '$location', 'PictureModal',
+function ($scope,   $filter,   FieldOfStudy,   Skill,   Member,   SweetAlert,   $location,   PictureModal) {
 	$scope.member = new Member();
 	$scope.password = {};
 
 	$scope.fieldOfStudies = FieldOfStudy.query();
 	$scope.skills = Skill.query();
+
+	$scope.showPictureModal = function() {
+		PictureModal.show();
+	};
 
 	// Email Error Text:
 	var emailText = {

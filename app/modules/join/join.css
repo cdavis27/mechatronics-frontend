@@ -33,6 +33,10 @@
     padding-left: 0;
 }
 
+.join-form .profile-picture img {
+    border-radius: 100%;
+}
+
 .join-form .form-control {
     /*border-radius: 20px;*/
     height: 40px;
@@ -63,4 +67,8 @@
     outline: none;
     border-color: #79BC94;
     box-shadow: none;
+}
+
+.join-view section {
+    padding: 0 !important;
 }
