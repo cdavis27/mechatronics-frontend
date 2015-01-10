@@ -70,8 +70,9 @@
 	        <div class="join-field col-lg-12">
 	        	<h4 class="join-label col-lg-2">PICTURE</h4>
 		        <div class="profile-picture form-group col-lg-10">
-		        	<img src="http://placekitten.com/g/101/101">
-		        	<button class="btn btn-primary" ng-click="showPictureModal()">Select Picture</button>	
+		        	<img ng-show="!member.profile_picture" src="/images/avatar_blank.png">
+		        	<img ng-show="member.profile_picture" ng-src="{{member.profile_picture}}" class="profile-img profile-img-xs">
+		        	<button class="btn btn-default select-pic" ng-click="showPictureModal()">Select Picture</button>	
 		        </div>
 	        </div>
 

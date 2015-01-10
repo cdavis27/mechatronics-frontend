@@ -69,6 +69,35 @@
     box-shadow: none;
 }
 
-.join-view section {
+.join-view .select-pic {
+    margin-top: 7%;
+    margin-left: 3%;
+}
+
+.join-modal {
+    height: 475px;
+    text-align: center;
+}
+
+.join-modal h2 {
+    font-size: 36px;
+}
+
+.join-modal section {
     padding: 0 !important;
+}
+
+.join-modal input[type="file"] {
+    margin: auto;
+    padding-top: 30%;
+    width: 43%;
+}
+
+.join-modal .profile-img {
+    margin-top: 15%;
+}
+
+.start-over-link {
+    float: left;
+    margin-top: 1.5%;
 }

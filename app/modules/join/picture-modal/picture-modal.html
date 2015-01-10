@@ -1,16 +1,23 @@
 <div class="modal-header">
     <h3 class="modal-title">Select a Profile Picture</h3>
 </div>
-<div class="modal-body">
-    <image-crop
+<div class="modal-body join-modal">
+    <div image-crop
     	data-width="300"
 		data-height="300"
 		data-shape="circle"
 		data-result="imageCropResult"
 		data-step="imageCropStep"
-    ></image-crop>
+        ng-hide="imageCropResult"
+        data-element-style="{'button': 'btn btn-default'}"
+    ></div>
+
+    <h3 ng-show="imageCropResult" ng-if="member.first_name">Looking Good, {{ member.first_name }}!</h3>
+    <h2 ng-show="imageCropResult" ng-if="!member.first_name">Nice!</h2>
+    <img ng-src="{{imageCropResult}}" class="profile-img profile-img-sm" ng-show="imageCropResult">
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <a href="javascript:void(0);" class="start-over-link" ng-click="imageCropStep=1" ng-show="imageCropStep!=1">Don't like it? Choose another picture</a>
     <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" ng-click="save()" ng-disabled="!imageCropResult">OK</button>
 </div>

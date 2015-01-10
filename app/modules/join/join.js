@@ -29,7 +29,10 @@ function ($scope,   $filter,   FieldOfStudy,   Skill,   Member,   SweetAlert,   
 	$scope.skills = Skill.query();
 
 	$scope.showPictureModal = function() {
-		PictureModal.show();
+		PictureModal.show($scope.member).then(function(image) {
+			console.log(image);
+			$scope.member.profile_picture = image;
+		});
 	};
 
 	// Email Error Text:

@@ -20,9 +20,18 @@
 	padding: 0;
 }
 
-.profile .profile-img {
+.profile-img {
     width: 80%;
     border-radius: 100%;
+}
+
+.profile-img-sm {
+	width: 30%;
+}
+
+.profile-img-xs {
+	width: 100px;
+	height: 100px;
 }
 
 .profile h3 { /* name */
