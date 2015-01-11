@@ -73,13 +73,10 @@ section {
     font-size: 1.4em;
 }
 
-#events {
-
+#announcements .announcement-passed {
+    color: #999;
+    font-style: italic;
 }
-/*
-#projects {
-    padding-bottom: 100px;
-}*/
 
 #byu-image {
     height: 0;
