@@ -18,9 +18,10 @@ function ($stateProvider,   $tooltipProvider) {
 }])
 
 .controller('MainCtrl',
-[		 '$scope', '$http', 'Model', 'SweetAlert',
-function ($scope,   $http,   Model,   SweetAlert) {
+[		 '$scope', 'Announcement', 'Model', 'SweetAlert',
+function ($scope,   Announcement,   Model,   SweetAlert) {
 	$scope.contact = {};
+	$scope.announcements = Announcement.query();
 
 	$scope.sendContact = function(contact) {
 		var send = true;

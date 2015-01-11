@@ -1,5 +1,5 @@
 section {
-    padding: 200px 0 0 0;
+    padding: 6% 0 0 0;
 }
 
 .section-heading {
@@ -12,8 +12,7 @@ section {
 }
 
 #about {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding: 6% 0;
 }
 
 #about .about-icons {
@@ -63,7 +62,15 @@ section {
 
 #announcements .text {
     font-size: 21px;
+}
 
+#announcements .text strong {
+    font-weight: 400;
+}
+
+#announcements .announcement-empty {
+    text-align: center;
+    font-size: 1.4em;
 }
 
 #events {
@@ -154,9 +161,3 @@ section {
 :-moz-placeholder {
     font-size: 16px;
 }
-
-/*#contact button {
-    background-color: #79BC94;
-    border-color: #79BC94;
-    padding: 8px 30px;
-}*/

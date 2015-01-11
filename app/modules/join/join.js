@@ -118,7 +118,7 @@ function ($scope,   $filter,   FieldOfStudy,   Skill,   Member,   SweetAlert,   
 					
 				},
 				function(data) {
-					if (data.email[0] === 'This field must be unique.') {
+					if (data.email && data.email[0] === 'This field must be unique.') {
 						member.error.email = true;
 						member.error.emailText = emailText.unique;
 						SweetAlert.swal('Oh no!', 'The email address ' + member.email + ' has already been used, please enter another.', 'error')
