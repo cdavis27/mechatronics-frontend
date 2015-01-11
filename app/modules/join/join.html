@@ -23,7 +23,7 @@
 		        </div>
 		    </div>
 
-	        <div class="join-field col-lg-12">
+	        <div class="join-field col-lg-12" ng-hide="hidePasswords">
 	        	<h4 class="join-label col-lg-2" popover-placement="bottom" popover="Required field. Make sure they match!" popover-trigger="show" popover-show="password.error">PASSWORD</h4>
 		        <div class="password-field form-group right-field  col-lg-5">
 		            <input type="password" ng-model="password.one" class="form-control" placeholder="password" ng-class="{'error': password.error}">

@@ -35,7 +35,7 @@
                 <h2 class="section-heading">ANNOUNCEMENTS</h2>
             </div>
             <div ng-if="!announcements" class="announcement-empty">There aren't any announcements posted :(</div>
-            <div class="announcement container col-lg-12" ng-repeat="announcement in announcements" ng-class="{'announcement-passed': announcement.has_passed}">
+            <div class="announcement container col-lg-12" ng-repeat="announcement in announcements" ng-class="{'announcement-passed': announcement.has_passed, 'announcement-today': announcement.is_today}">
                 <div class="annoucement-date col-lg-1">
                     <h1 class="day">{{ announcement.day }}</h1>
                     <p class="month">{{ announcement.month }}</p>

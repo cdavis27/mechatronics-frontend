@@ -78,6 +78,10 @@ section {
     font-style: italic;
 }
 
+#announcements .announcement-today {
+    background-color: #F6FFFA;
+}
+
 #byu-image {
     height: 0;
     padding-bottom: 26%;

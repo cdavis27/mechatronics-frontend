@@ -8,12 +8,16 @@ angular
 .config(['$stateProvider',
 function ($stateProvider) {
 
+	/*///// REMOVE COMMENTS TO ENABLE MEMBERS ////
 	$stateProvider
 	.state('app.members', {
 		url: '/members',
 		templateUrl: 'modules/members/members.html',
 		controller: 'MembersCtrl'
 	});
+	// Don't forget to add the MEMBERS link
+	// on the homepage
+	*////////////////////////////////////////////
 
 }])
 .controller('MembersCtrl',

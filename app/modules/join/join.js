@@ -50,6 +50,13 @@ function ($scope,   $filter,   FieldOfStudy,   Skill,   Member,   SweetAlert,   
 		unique: 'Looks like this email is already being used!'
 	};
 
+	////// DELETE TO ENABLE PASSWORDS //////
+	var tmpPassword = Math.random().toString().split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
+	$scope.password.one = tmpPassword;
+	$scope.password.two = tmpPassword;
+	$scope.hidePasswords = true;
+	///////////////////////////////////////
+
 	$scope.submit = function(member, password) {
 		var send = true;
 		member.error = {};
