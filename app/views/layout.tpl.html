@@ -5,9 +5,7 @@
             <div class="subtitle">BYU</div>
             <div class="title">Mechatronics</div>
             <div class="join-button col-lg-6 col-lg-offset-3 text-center">
-                <button type="submit" class="btn btn-primary btn-large">Join
-                    
-                </button>
+                <button type="submit" class="btn btn-primary btn-large">Join</button>
             </div>
         </div>
     </div>
@@ -23,15 +21,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">
-                    <!-- <img src="images/mechatronics-logo.png"> -->
+                <a class="navbar-brand" ui-sref="app.main" ng-if="!$state.includes('app.main')">
+                    <img src="images/mechatronics-logo-xs.png" class="brand-small" alt="BYU Mechatronics Home">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="brand" ng-if="!$state.includes('app.main')">
-                        <a ui-sref="app.main"><img src="/images/mechatronics-logo-xs.png" class="brand-small"></a>
-                    </li>
                     <li>
                       <a ui-sref="app.hack-nights">HACK NIGHTS</a>
                     </li>
