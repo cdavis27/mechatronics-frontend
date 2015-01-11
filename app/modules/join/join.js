@@ -19,9 +19,19 @@ function ($stateProvider) {
 
 }])
 
+.service('fileUploader', [function() {
+
+	this.createForm = function(file) {
+	    var fd = new FormData();
+	    fd.append('image', file);
+
+	    return fd;
+	}
+}])
+
 .controller('JoinCtrl',
-[	     '$scope', '$filter', 'FieldOfStudy', 'Skill', 'Member', 'SweetAlert', '$location', 'PictureModal',
-function ($scope,   $filter,   FieldOfStudy,   Skill,   Member,   SweetAlert,   $location,   PictureModal) {
+[	     '$scope', '$filter', 'FieldOfStudy', 'Skill', 'Member', 'SweetAlert', '$location', 'PictureModal', 'fileUploader',
+function ($scope,   $filter,   FieldOfStudy,   Skill,   Member,   SweetAlert,   $location,   PictureModal,   fileUploader) {
 	$scope.member = new Member();
 	$scope.password = {};
 
@@ -30,7 +40,6 @@ function ($scope,   $filter,   FieldOfStudy,   Skill,   Member,   SweetAlert,   
 
 	$scope.showPictureModal = function() {
 		PictureModal.show($scope.member).then(function(image) {
-			console.log(image);
 			$scope.member.profile_picture = image;
 		});
 	};
@@ -85,13 +94,16 @@ function ($scope,   $filter,   FieldOfStudy,   Skill,   Member,   SweetAlert,   
 				}
 			}
 		}
-		member.skills = _skills;
+		member.skills = (_skills.length > 0) ? _skills : null;
 
 		if (send) {
 			// for some reason we need groups to be empty
-			member.groups = [];
+			member.groups = null;
 
-			member.$save()
+
+			console.log(member);
+
+			member.createWithImage()
 				.then(function(res) {
 					SweetAlert.swal({
 						title: 'Hooray!', 
@@ -104,9 +116,9 @@ function ($scope,   $filter,   FieldOfStudy,   Skill,   Member,   SweetAlert,   
 						});
 					});
 					
-				})
-				.catch(function(req) {
-					if (req.data.email[0] === 'This field must be unique.') {
+				},
+				function(data) {
+					if (data.email[0] === 'This field must be unique.') {
 						member.error.email = true;
 						member.error.emailText = emailText.unique;
 						SweetAlert.swal('Oh no!', 'The email address ' + member.email + ' has already been used, please enter another.', 'error')
