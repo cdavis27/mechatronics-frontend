@@ -77,7 +77,7 @@ function ($scope,   $filter,   FieldOfStudy,   Skill,   Member,   SweetAlert,   
 			member.error.emailText = emailText.required;
 		}
 
-		if (!password.one || !password.one.trim() || password.one !== password.two) {
+		if (!password.one || (password.one.trim && !password.one.trim()) || password.one !== password.two) {
 			send = false;
 			password.error = true;
 		}
