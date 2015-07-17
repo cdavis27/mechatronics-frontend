@@ -1,3 +1,6 @@
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,100,300,700');
+
 html {
     position: relative;
     min-height: 100%;
@@ -43,7 +46,7 @@ body {
 }
 
 header {
-    background: url('images/circuitBoard-01.png');
+    background: url('/images/circuitBoard-01.png');
     background-size: cover;
     text-align: center;
     /*color: #212224;*/
