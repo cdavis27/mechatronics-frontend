@@ -22,7 +22,7 @@
     "grunt-ngmin": "^0.0.3",
     "grunt-svgmin": "^0.4.0",
     "grunt-usemin": "^2.1.1",
-    "grunt-wiredep": "^1.7.0",
+    "grunt-wiredep": "~1.8.0",
     "imagemin-gifsicle": "^1.0.0",
     "imagemin-jpegtran": "^1.0.0",
     "imagemin-optipng": "^1.0.0",
