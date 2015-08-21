@@ -5,7 +5,9 @@ Project setup
 
 1. clone repo
 2. run `npm install`
-2. run `bower install`
+3. run `bower install`
+4. Setup your local config
+5. `grunt build`
 
 nginx conf:
 
