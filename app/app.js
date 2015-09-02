@@ -20,7 +20,7 @@ angular
     'mechApp.main',
     'mechApp.hackNights',
     'mechApp.members',
-    'mechApp.join',
+    // 'mechApp.join',
     'mechApp.models'
 ])
 .config(['$stateProvider', '$urlRouterProvider',
@@ -36,8 +36,8 @@ function ($stateProvider,   $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     
 }])
-.run([   '$rootScope', '$state', '$stateParams',
-function ($rootScope,   $state,   $stateParams) {
+.run([   '$rootScope', '$state', '$stateParams', '$window',
+function ($rootScope,   $state,   $stateParams,   $window) {
 
     // It's very handy to add references to $state and $stateParams to the $rootScope
     // so that you can access them from any scope within your applications.For example,
@@ -45,5 +45,9 @@ function ($rootScope,   $state,   $stateParams) {
     // to active whenever 'contacts.list' or one of its decendents is active.
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
+
+    $rootScope.join = function() {
+        $window.location.href = 'http://clubs.byu.edu/organization/MTMyNDYxNjQtMDAwMC0wMDAwMA==/profile';
+    };
     
 }]);
