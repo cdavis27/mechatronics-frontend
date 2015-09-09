@@ -5,7 +5,8 @@
             <div class="subtitle">BYU</div>
             <div class="title">Mechatronics</div>
             <div class="join-button col-lg-6 col-lg-offset-3 text-center">
-                <button type="submit" class="btn btn-primary btn-large" ng-click="join()" >Join</button>
+                <button class="btn btn-primary btn-large" ng-click="join()">Join</button>
+                <button class="btn btn-primary btn-large btn-invert" ng-click="subscribe()">Subscribe</button>
             </div>
         </div>
     </div>
@@ -27,6 +28,9 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
+                    <li>
+                      <a href="" ng-click="announcements()">ANNOUNCEMENTS</a>
+                    </li>
                     <li>
                       <a ui-sref="app.hack-nights">HACK NIGHTS</a>
                     </li>

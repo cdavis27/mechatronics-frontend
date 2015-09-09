@@ -45,6 +45,17 @@ body {
     width: 150%;
 }
 
+.btn-invert {
+    margin-left: 20px;
+    color: #79BC94;
+    background-color: #fff;
+    border-color: #79BC94;
+}
+
+.btn-invert:hover {
+    font-weight: bold;
+}
+
 header {
     background: url('/images/circuitBoard-01.png');
     background-size: cover;

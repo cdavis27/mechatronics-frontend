@@ -36,8 +36,8 @@ function ($stateProvider,   $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     
 }])
-.run([   '$rootScope', '$state', '$stateParams', '$window',
-function ($rootScope,   $state,   $stateParams,   $window) {
+.run([   '$rootScope', '$state', '$stateParams', '$window', '$anchorScroll', '$location',
+function ($rootScope,   $state,   $stateParams,   $window,   $anchorScroll,   $location) {
 
     // It's very handy to add references to $state and $stateParams to the $rootScope
     // so that you can access them from any scope within your applications.For example,
@@ -48,6 +48,15 @@ function ($rootScope,   $state,   $stateParams,   $window) {
 
     $rootScope.join = function() {
         $window.location.href = 'http://clubs.byu.edu/organization/MTMyNDYxNjQtMDAwMC0wMDAwMA==/profile';
+    };
+
+    $rootScope.subscribe = function() {
+        $window.location.href = 'http://mail.byumechatronics.com'
+    };
+
+    $rootScope.announcements = function() {
+        $location.hash('announcements');
+        $anchorScroll();
     };
     
 }]);
