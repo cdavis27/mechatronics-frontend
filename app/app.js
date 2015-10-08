@@ -51,7 +51,11 @@ function ($rootScope,   $state,   $stateParams,   $window,   $anchorScroll,   $l
     };
 
     $rootScope.subscribe = function() {
-        $window.location.href = 'http://mail.byumechatronics.com'
+        $window.location.href = 'http://mail.byumechatronics.com';
+    };
+
+    $rootScope.payDues = function() {
+        $window.location.href = 'https://commerce.cashnet.com/cashnetk/selfserve/EditItem.aspx?PC=webagency-3P&ItemCount=1';
     };
 
     $rootScope.announcements = function() {
