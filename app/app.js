@@ -50,12 +50,13 @@ function ($rootScope,   $state,   $stateParams,   $window,   $anchorScroll,   $l
         $window.location.href = 'http://clubs.byu.edu/organization/MTMyNDYxNjQtMDAwMC0wMDAwMA==/profile';
     };
 
-    $rootScope.subscribe = function() {
-        $window.location.href = 'http://mail.byumechatronics.com';
+    $rootScope.slack = function() {
+        $window.location.href = 'http://slack.byumechatronics.com';
     };
 
     $rootScope.payDues = function() {
-        $window.location.href = 'https://commerce.cashnet.com/cashnetk/selfserve/EditItem.aspx?PC=webagency-3P&ItemCount=1';
+	$window.location.href = 'https://commerce.cashnet.com/webc?itemcode=webc-mec';
+
     };
 
     $rootScope.announcements = function() {
